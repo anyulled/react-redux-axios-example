@@ -1,22 +1,23 @@
-import React, {Component} from 'react';
+import React from "react";
 
-class Country extends Component{
-	constructor(props){
-		super(props);
-	}
+class Country extends React.Component {
 
-	render() {
-		const {country} = this.props;
+    render() {
+        const {country} = this.props;//eslint-disable-line prefer-destructuring
 
-		return (
+        return (
 			<tr>
 				<td>{country.name}</td>
 				<td>{country.capital}</td>
 				<td>{country.population}</td>
 				<td>{country.topLevelDomain}</td>
 			</tr>
-		)
-	}
+        );
+    }
+}
+
+Country.propTypes = {
+    country: React.PropTypes.object.isRequired
 };
 
 export default Country;

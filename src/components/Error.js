@@ -1,29 +1,31 @@
-import React, {Component} from 'react';
+import React from "react";
 
-import {connect} from 'react-redux';
+class Error extends React.Component {
 
-@connect(state => ({data: state.example.data}))
-class Error extends Component{
-	constructor(props){
-		super(props);
-	}
+    render() {
+        const {data} = this.props; //eslint-disable-line prefer-destructuring
+        return (
+            <div className="row">
+                <div className="col-md-12">
+                    <div className="error-template">
+                        <h1>Oops!</h1>
+                        <h2>{data.status}</h2>
+                        <div className="error-details">
+                            {data.message}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
 
-	render() {
-		const {data} = this.props;
-		return (
-			<div className="row">
-				<div className="col-md-12">
-					<div className="error-template">
-						<h1>Oops!</h1>
-						<h2>{data.status}</h2>
-						<div className="error-details">
-							{data.message}
-						</div>
-					</div>
-				</div>
-			</div>
-		)
-	}
+Error.propTypes = {
+    data: React.PropTypes.object
+};
+
+Error.defaultProps = {
+    data: {}
 };
 
 export default Error;

@@ -1,32 +1,30 @@
-import 'babel-core/polyfill';
+import "babel-core/polyfill";
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import {Provider} from "react-redux";
+import {Route} from "react-router";
+import {ReduxRouter} from "redux-react-router";
+import {syncHistoryWithStore} from "react-router-redux";
 
-
-import { Provider } from 'react-redux';
-import { Router, Route, IndexRoute } from 'react-router';
-import { reduxReactRouter, routerStateReducer, ReduxRouter } from 'redux-react-router';
-import createBrowserHistory from 'history/lib/createBrowserHistory';
-import configureStore from './store';
-import App from './containers/App';
-import Countries from './components/Countries';
-import Error from './components/Error';
-import ExpectedError from './components/ExpectedError';
-import Home from './components/Home';
-import {fetchData} from './actions/actions';
-
-const history = new createBrowserHistory();
-const store = configureStore();
+import App from "./containers/AppContainer";
+import Countries from "./containers/CountriesContainer";
+import Error from "./containers/ErrorContainer";
+import ExpectedError from "./components/ExpectedError";
+import Home from "./components/Home";
+import {fetchData} from "./actions/actions";
+import store from "./store";
 
 function loadData() {
-	store.dispatch(fetchData('https://restcountries.eu/rest/v1/all'));
-};
+    store.dispatch(fetchData("https://restcountries.eu/rest/v1/all"));
+}
 
 //we expect this to fail and get forwarded to the error page
 function loadBadData(){
-	store.dispatch(fetchData('https://restcountries.eu/rest/v1/callingcode/123123'));
-};
+    store.dispatch(fetchData("https://restcountries.eu/rest/v1/callingcode/123123"));
+}
+
+const history = syncHistoryWithStore();
 
 ReactDOM.render(
 	<Provider store={store}>
@@ -41,5 +39,5 @@ ReactDOM.render(
 			</Route>
 		</ReduxRouter>
 	</Provider>,
-	document.getElementById('root')
+    document.getElementById("root")
 );

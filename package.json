@@ -4,11 +4,11 @@
   "description": "Example async data fetch with spinner",
   "scripts": {
     "start": "node webpack/server.js",
-    "lint": "eslint src"
+    "lint": "eslint src --fix"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oviava/react-redux-axios-example.git"
+    "url": "https://github.com/anyulled/react-redux-axios-example.git"
   },
   "keywords": [
     "react",
@@ -21,10 +21,10 @@
     "edit",
     "webpack"
   ],
-  "author": "Ovidiu Ava <ovidiu.ava@gmail.com> (http://github.com/oviava)",
+  "author": "Anyul Rivas <anyulled@gmail.com> (http://github.com/anyulled)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oviava/react-redux-axios-example/issues"
+    "url": "https://github.com/anyulled/react-redux-axios-example/issues"
   },
   "homepage": "https://github.com/oviava/react-redux-axios-example",
   "devDependencies": {
@@ -33,25 +33,27 @@
     "babel-loader": "5.x",
     "css-loader": "latest",
     "eslint": "latest",
+    "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "latest",
-    "extract-text-webpack-plugin": "latest",
+    "extract-text-webpack-plugin": "<2",
     "file-loader": "latest",
+    "raw-loader": "latest",
     "react-hot-loader": "latest",
     "redux-devtools": "^2.1.2",
     "style-loader": "latest",
     "url-loader": "latest",
-    "webpack": "latest",
-    "webpack-dev-server": "latest",
-    "raw-loader": "latest"
+    "webpack": "^1",
+    "webpack-dev-server": "^1"
   },
   "dependencies": {
     "axios": "latest",
     "bootstrap": "^3.3.5",
     "history": "1.13.x",
     "react": "latest",
-    "react-dom": "^0.14.3",
+    "react-dom": "latest",
     "react-redux": "latest",
-    "react-router": "latest",
+    "react-router": "<4",
+    "react-router-redux": "^4.0.8",
     "redux": "latest",
     "redux-react-router": "latest",
     "redux-thunk": "latest"
