@@ -1,5 +1,5 @@
 import {connect} from "react-redux";
-import App from "../components/App";
+import AppComponent from "../components/App";
 
 const mapStateToProps = state => ({
     routerState: state.router,
@@ -8,4 +8,4 @@ const mapStateToProps = state => ({
 
 //const mapDispatchToProps = dispatch => ({});
 
-export default connect(mapStateToProps, null, App);
+export default connect(mapStateToProps, null, AppComponent);

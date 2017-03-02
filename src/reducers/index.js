@@ -1,14 +1,12 @@
 import * as types from "../actions/actionTypes";
-import {combineReducers} from "redux"; //might need to remove
-import {routerStateReducer} from "redux-react-router";
 
-
-function exampleReducer(state = {
+const initialState = {
     isLoading: false,
     data: [],
     error: false
-}
-, action = null) {
+};
+
+function rootReducer(state = initialState, action = null) {
     switch (action.type) {
         case types.RECV_ERROR:
             return Object.assign({}, state, {isLoading: false, data: action.data, error: true});
@@ -20,10 +18,5 @@ function exampleReducer(state = {
             return state;
     }
 }
-
-const rootReducer = combineReducers({
-    router: routerStateReducer,
-    example: exampleReducer
-});
 
 export default rootReducer;

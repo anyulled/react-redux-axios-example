@@ -2,6 +2,9 @@ import React, {Component} from "react";
 import Country from "./Country";
 
 class Countries extends Component {
+    componentWillMount() {
+        this.props.loadData();
+    }
 
     render() {
 
@@ -30,11 +33,13 @@ class Countries extends Component {
 }
 
 Countries.propTypes = {
-    data: React.PropTypes.array
+    data: React.PropTypes.array,
+    loadData: React.PropTypes.func
 };
 
 Countries.defaultProps = {
-    data: {}
+    data: {},
+    loadData: () => ({})
 };
 
 export default Countries;

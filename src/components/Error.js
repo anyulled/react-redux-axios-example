@@ -1,6 +1,9 @@
 import React from "react";
 
 class Error extends React.Component {
+    componentWillMount() {
+        this.props.loadBadData();
+    }
 
     render() {
         const {data} = this.props; //eslint-disable-line prefer-destructuring
@@ -21,11 +24,13 @@ class Error extends React.Component {
 }
 
 Error.propTypes = {
-    data: React.PropTypes.object
+    data: React.PropTypes.object,
+    loadBadData: React.PropTypes.func
 };
 
 Error.defaultProps = {
-    data: {}
+    data: {},
+    loadBadData: () => ({})
 };
 
 export default Error;
