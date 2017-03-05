@@ -26,7 +26,7 @@ App.propTypes = {
 };
 
 App.defaultProps = {
-    example: {isLoading: true}
+    example: {isLoading: false}
 };
 
 export default App;

@@ -2,14 +2,17 @@ import React, {Component} from "react";
 import Country from "./Country";
 
 class Countries extends Component {
+    constructor(props) {
+        super(props);
+        console.warn("props", props);//eslint-disable-line no-console
+    }
+
     componentWillMount() {
         this.props.loadData();
     }
 
     render() {
-
-        const {data} = this.props; //eslint-disable-line prefer-destructuring
-
+        const {props:{data}} = this;
         return (
             <div className='container'>
                 <table className='table table-bordered table-striped'>
@@ -34,12 +37,24 @@ class Countries extends Component {
 
 Countries.propTypes = {
     data: React.PropTypes.array,
-    loadData: React.PropTypes.func
+    loadBadData: React.PropTypes.any,
+    loadData: React.PropTypes.any
 };
 
 Countries.defaultProps = {
-    data: {},
-    loadData: () => ({})
+    data: [{
+        name: "Venezuela",
+        capital: "Caracas",
+        population: "30.000.000",
+        topLevelDomain: "VEN"
+    }, {
+        name: "Spain",
+        capital: "Madrid",
+        population: "55.000.000",
+        topLevelDomain: "SPA"
+    }],
+    loadBadData: () => (console.info("loading data")),//eslint-disable-line no-console
+    loadData: () => (console.info("loading data"))//eslint-disable-line no-console
 };
 
 export default Countries;

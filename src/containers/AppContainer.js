@@ -2,7 +2,7 @@ import {connect} from "react-redux";
 import AppComponent from "../components/App";
 
 const mapStateToProps = state => ({
-    routerState: state.router,
+    //routerState: state.router,
     example: state.example
 });
 
