@@ -7,14 +7,12 @@ import "../../styles/app.css";
 class App extends Component {
 
     render() {
-        const {children} = this.props;
-        const {example} = this.props;
-
+        const {children, example} = this.props;
         return (
             <div>
                 <NavBar />
                 <div className='container'>
-                    {example.isLoading ? <Spinner /> : children}
+                    {/*example.isLoading === true ? <Spinner /> :*/ children}
                 </div>
             </div>
         );
@@ -22,7 +20,14 @@ class App extends Component {
 }
 
 App.propTypes = {
-    example: React.PropTypes.object
+    example: React.PropTypes.shape({
+        isLoading: React.PropTypes.bool.isRequired,
+        data: React.PropTypes.oneOfType([
+            React.PropTypes.array,
+            React.PropTypes.object
+        ]).isRequired,
+        error: React.PropTypes.bool.isRequired
+    })
 };
 
 App.defaultProps = {

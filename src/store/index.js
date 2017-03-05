@@ -1,13 +1,16 @@
-import {createStore, applyMiddleware, combineReducers} from "redux";
+import {createStore, applyMiddleware, combineReducers, compose} from "redux";
 
 import rootReducer from "../reducers";
 import thunkMiddleware from "redux-thunk";
 
-//import {routerReducer} from "react-router-redux";
+import {routerReducer} from "react-router-redux";
 
+
+/** @namespace window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ */
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const reducers = combineReducers({
-    example: rootReducer//,
-    //routing: routerReducer
+    example: rootReducer,
+    routing: routerReducer
 });
 
-export default createStore(reducers, applyMiddleware(thunkMiddleware));
+export default createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleware)));

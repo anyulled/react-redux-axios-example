@@ -6,13 +6,14 @@ class Error extends React.Component {
     }
 
     render() {
-        const {data} = this.props; //eslint-disable-line prefer-destructuring
+        const {props:{data}} = this;
+        console.dir(this.props);
         return (
             <div className="row">
                 <div className="col-md-12">
                     <div className="error-template">
                         <h1>Oops!</h1>
-                        <h2>{data.status}</h2>
+                        <h2>{data.response && data.response.status}</h2>
                         <div className="error-details">
                             {data.message}
                         </div>
@@ -24,12 +25,18 @@ class Error extends React.Component {
 }
 
 Error.propTypes = {
-    data: React.PropTypes.object,
+    data: React.PropTypes.oneOfType([
+        React.PropTypes.array,
+        React.PropTypes.object
+    ]),
     loadBadData: React.PropTypes.func
 };
 
 Error.defaultProps = {
-    data: {},
+    data: {
+        status: 404,
+        message: "default message"
+    },
     loadBadData: () => ({})
 };
 

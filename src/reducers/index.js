@@ -13,7 +13,7 @@ function rootReducer(state = initialState, action = null) {
         case types.RECV_DATA:
             return Object.assign({}, state, {isLoading: false, data: action.data, error: false});
         case types.REQ_DATA:
-            return Object.assign({}, state, {isLoading: true, error: false});
+            return Object.assign({}, state, {isLoading: true, data: [], error: false});
         default:
             return state;
     }

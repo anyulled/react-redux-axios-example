@@ -4,7 +4,6 @@ import Country from "./Country";
 class Countries extends Component {
     constructor(props) {
         super(props);
-        console.warn("props", props);//eslint-disable-line no-console
     }
 
     componentWillMount() {
