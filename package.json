@@ -29,7 +29,7 @@
   "homepage": "https://github.com/oviava/react-redux-axios-example",
   "devDependencies": {
     "babel-core": "5.x",
-    "babel-eslint": "latest",
+    "babel-eslint": "^10.0.2",
     "babel-loader": "5.x",
     "css-loader": "latest",
     "eslint": "latest",
