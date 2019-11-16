@@ -49,7 +49,7 @@
     "axios": "latest",
     "bootstrap": "^3.3.5",
     "history": "1.13.x",
-    "react": "latest",
+    "react": "^16.12.0",
     "react-dom": "latest",
     "react-redux": "latest",
     "react-router": "<4",
