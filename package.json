@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "axios": "latest",
-    "bootstrap": "^3.3.5",
+    "bootstrap": "^4.4.0",
     "history": "1.13.x",
     "react": "latest",
     "react-dom": "latest",
