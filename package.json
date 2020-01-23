@@ -46,7 +46,7 @@
     "webpack-dev-server": "^1"
   },
   "dependencies": {
-    "axios": "latest",
+    "axios": "^0.19.2",
     "bootstrap": "^3.3.5",
     "history": "1.13.x",
     "react": "latest",
