@@ -30,7 +30,7 @@
   "devDependencies": {
     "babel-core": "5.x",
     "babel-eslint": "latest",
-    "babel-loader": "5.x",
+    "babel-loader": "^8.1.0",
     "css-loader": "latest",
     "eslint": "latest",
     "eslint-plugin-import": "latest",
