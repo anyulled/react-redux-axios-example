@@ -48,7 +48,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
-    "history": "1.17.0",
+    "history": "4.10.1",
     "react": "^16.13.1",
     "react-dom": "latest",
     "react-redux": "latest",
