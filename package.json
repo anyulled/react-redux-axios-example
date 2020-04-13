@@ -37,7 +37,7 @@
     "eslint-plugin-react": "latest",
     "extract-text-webpack-plugin": "<2",
     "file-loader": "latest",
-    "raw-loader": "latest",
+    "raw-loader": "^4.0.0",
     "react-hot-loader": "latest",
     "redux-devtools": "^2.1.2",
     "style-loader": "latest",
