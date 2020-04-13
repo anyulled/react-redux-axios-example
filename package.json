@@ -52,7 +52,7 @@
     "react": "^16.13.1",
     "react-dom": "latest",
     "react-redux": "latest",
-    "react-router": "<4",
+    "react-router": "^5.1.2",
     "react-router-redux": "^4.0.8",
     "redux": "latest",
     "redux-react-router": "latest",
