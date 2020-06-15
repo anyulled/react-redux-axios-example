@@ -51,7 +51,7 @@
     "history": "5.0.0",
     "react": "^16.13.1",
     "react-dom": "latest",
-    "react-redux": "latest",
+    "react-redux": "^7.2.0",
     "react-router": "^5.2.0",
     "react-router-redux": "^4.0.8",
     "redux": "latest",
