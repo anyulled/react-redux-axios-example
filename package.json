@@ -39,7 +39,7 @@
     "file-loader": "latest",
     "raw-loader": "latest",
     "react-hot-loader": "latest",
-    "redux-devtools": "^2.1.2",
+    "redux-devtools": "^3.6.0",
     "style-loader": "latest",
     "url-loader": "latest",
     "webpack": "^1",
