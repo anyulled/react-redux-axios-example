@@ -56,6 +56,6 @@
     "react-router-redux": "^4.0.8",
     "redux": "latest",
     "redux-react-router": "^0.4.0",
-    "redux-thunk": "latest"
+    "redux-thunk": "^2.3.0"
   }
 }
