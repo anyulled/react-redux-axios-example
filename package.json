@@ -42,7 +42,7 @@
     "redux-devtools": "^3.7.0",
     "style-loader": "latest",
     "url-loader": "latest",
-    "webpack": "^1",
+    "webpack": "^2",
     "webpack-dev-server": "^1"
   },
   "dependencies": {
