@@ -43,7 +43,7 @@
     "style-loader": "latest",
     "url-loader": "latest",
     "webpack": "^2",
-    "webpack-dev-server": "^1"
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "axios": "^0.20.0",
